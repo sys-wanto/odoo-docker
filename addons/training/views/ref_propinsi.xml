@@ -1,0 +1,84 @@
+<odoo>
+  <data>
+
+    <!-- ctu.ref_propinsi tree view -->
+    <record id="ctu_ref_propinsi_view_tree" model="ir.ui.view">
+      <field name="name">ctu.ref_propinsi.view.tree</field>
+      <field name="model">ctu.ref_propinsi</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="kd_propinsi" />
+          <field name="nm_propinsi" />
+
+        </tree>
+      </field>
+    </record>
+
+    <!-- ctu.ref_propinsi form view -->
+    <record id="ctu_ref_propinsi_view_form" model="ir.ui.view">
+      <field name="name">ctu.ref_propinsi.view.form</field>
+      <field name="model">ctu.ref_propinsi</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="kd_propinsi" />
+              <field name="nm_propinsi" />
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- ctu.ref_propinsi action window -->
+    <record id="ctu_ref_propinsi_action" model="ir.actions.act_window">
+      <field name="name">Class</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ctu.ref_propinsi</field>
+      <field name="view_mode">tree,form,pivot,graph</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <!-- Add Text Here -->
+        </p>
+        <p>
+          <!-- More details about what a user can do with this object will be OK -->
+
+        </p>
+      </field>
+    </record>
+
+    <!-- ctu.ref_propinsi pivot view -->
+    <record id="ctu_ref_propinsi_view_pivot" model="ir.ui.view">
+      <field name="name">ctu.ref_propinsi.view.pivot</field>
+      <field name="model">ctu.ref_propinsi</field>
+      <field name="arch" type="xml">
+        <pivot string="Pivot Description">
+          <!-- Add your fields here -->
+
+        </pivot>
+      </field>
+    </record>
+
+    <!-- ctu.ref_propinsi graph view -->
+    <record id="ctu_ref_propinsi_view_graph" model="ir.ui.view">
+      <field name="name">ctu.ref_propinsi.view.graph</field>
+      <field name="model">ctu.ref_propinsi</field>
+      <field name="arch" type="xml">
+        <graph string="Graph Description">
+          <!-- Add your fields here -->
+
+        </graph>
+      </field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="ref_propinsi_menu_root" name="Referensi Propinsi" />
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="ref_propinsi_menu_categ" name="ref_propinsi" parent="ref_propinsi_menu_root" />
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="ref_propinsi_menu_act" name="ref_propinsi" parent="ref_propinsi_menu_categ"
+      action="ctu_ref_propinsi_action" />
+
+  </data>
+</odoo>

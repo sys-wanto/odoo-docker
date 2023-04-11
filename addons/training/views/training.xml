@@ -83,6 +83,8 @@
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="training_menu_act" name="Class" parent="training_menu_categ"
       action="ctu_training_action" />
+      <menuitem id="training_menu_act" name="Propinsi" parent="ref_propinsi_menu_categ"
+      action="ctu_ref_propinsi_action" />
 
   </data>
 </odoo>

@@ -26,7 +26,8 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/training.xml'
+        'views/training.xml',
+        'views/ref_propinsi.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

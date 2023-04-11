@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 training.access_ctu_training,access_ctu_training,training.model_ctu_training,base.group_user,1,1,1,1
+training.access_ctu_ref_propinsi,access_ctu_ref_propinsi,training.model_ctu_ref_propinsi,base.group_user,1,1,1,1
