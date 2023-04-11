@@ -1,0 +1,88 @@
+<odoo>
+  <data>
+
+    <!-- ctu.training tree view -->
+    <record id="ctu_training_view_tree" model="ir.ui.view">
+      <field name="name">ctu.training.view.tree</field>
+      <field name="model">ctu.training</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="tanggal" />
+          <field name="pengajar" />
+          <field name="jumlah_peserta" />
+
+        </tree>
+      </field>
+    </record>
+
+    <!-- ctu.training form view -->
+    <record id="ctu_training_view_form" model="ir.ui.view">
+      <field name="name">ctu.training.view.form</field>
+      <field name="model">ctu.training</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name" />
+              <field name="tanggal" />
+              <field name="pengajar" />
+              <field name="jumlah_peserta" />
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- ctu.training action window -->
+    <record id="ctu_training_action" model="ir.actions.act_window">
+      <field name="name">Class</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ctu.training</field>
+      <field name="view_mode">tree,form,pivot,graph</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <!-- Add Text Here -->
+        </p>
+        <p>
+          <!-- More details about what a user can do with this object will be OK -->
+
+        </p>
+      </field>
+    </record>
+
+    <!-- ctu.training pivot view -->
+    <record id="ctu_training_view_pivot" model="ir.ui.view">
+      <field name="name">ctu.training.view.pivot</field>
+      <field name="model">ctu.training</field>
+      <field name="arch" type="xml">
+        <pivot string="Pivot Description">
+          <!-- Add your fields here -->
+
+        </pivot>
+      </field>
+    </record>
+
+    <!-- ctu.training graph view -->
+    <record id="ctu_training_view_graph" model="ir.ui.view">
+      <field name="name">ctu.training.view.graph</field>
+      <field name="model">ctu.training</field>
+      <field name="arch" type="xml">
+        <graph string="Graph Description">
+          <!-- Add your fields here -->
+
+        </graph>
+      </field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="training_menu_root" name="CTU Training" />
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="training_menu_categ" name="Training" parent="training_menu_root" />
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="training_menu_act" name="Class" parent="training_menu_categ"
+      action="ctu_training_action" />
+
+  </data>
+</odoo>
