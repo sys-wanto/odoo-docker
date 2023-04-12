@@ -1,9 +1,11 @@
 from odoo import models, fields, api
+from datetime import datetime
+
 
 class Category(models.Model):
-    _name         = "online_store.category"
-    _description  = "Tabel Category"
+    _name = "online_store.category"
+    _description = "Tabel Category"
 
-    nm_category = fields.Char('nm_category')
-    updated_at  = fields.Datetime('updated_at')
-    created_at  = fields.Datetime('created_at')
+    category_nm = fields.Char('category_nm')
+    updated_at = fields.Datetime('updated_at', default=datetime.today(),)
+    created_at = fields.Datetime('created_at', default=datetime.today())
