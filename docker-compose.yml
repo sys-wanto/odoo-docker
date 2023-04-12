@@ -13,6 +13,8 @@ services:
     command: odoo -u ctu -d ctu2  
   db:
     image: postgres:13
+    ports:
+      - "5432:5432"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo

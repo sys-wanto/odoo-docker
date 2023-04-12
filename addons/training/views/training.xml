@@ -76,15 +76,5 @@
       </field>
     </record>
 
-    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
-    <menuitem id="training_menu_root" name="CTU Training" />
-    <!-- This Menu Item Must have a parent -->
-    <menuitem id="training_menu_categ" name="Training" parent="training_menu_root" />
-    <!-- This Menu Item must have a parent and an action -->
-    <menuitem id="training_menu_act" name="Class" parent="training_menu_categ"
-      action="ctu_training_action" />
-      <menuitem id="training_menu_act" name="Propinsi" parent="ref_propinsi_menu_categ"
-      action="ctu_ref_propinsi_action" />
-
   </data>
 </odoo>

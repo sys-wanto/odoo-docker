@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <data>
+    <!-- online_store.member tree view -->
+    <record id="online_store_member_view_tree" model="ir.ui.view">
+      <field name="name">online_store.member.view.tree</field>
+      <field name="model">online_store.member</field>
+      <field name="arch" type="xml">
+        <tree>
+          <!-- Add your fields here -->
+          <field name="member_nm"></field>
+          <field name="join_date"></field>
+        </tree>
+      </field>
+    </record>
+
+    <!-- online_store.member form view -->
+    <record id="online_store_member_view_form" model="ir.ui.view">
+      <field name="name">online_store.member.view.form</field>
+      <field name="model">online_store.member</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <!-- Add your fields here -->
+              <field name="member_nm"></field>
+              <field name="join_date"></field>
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="online_store_member_action" model="ir.actions.act_window">
+      <field name="name">Online Store</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">online_store.member</field>
+      <field name="view_mode">tree,form,pivot,graph</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <!-- Add Text Here -->
+        </p>
+        <p>
+          <!-- More details about what a user can do with this object will be OK -->
+
+        </p>
+      </field>
+    </record>
+
+
+    <!-- online_store.member pivot view -->
+    <record id="online_store_member_view_pivot" model="ir.ui.view">
+      <field name="name">online_store.member.view.pivot</field>
+      <field name="model">online_store.member</field>
+      <field name="arch" type="xml">
+        <pivot string="Pivot Description">
+          <!-- Add your fields here -->
+
+        </pivot>
+      </field>
+    </record>
+
+    <!-- online_store.member graph view -->
+    <record id="online_store_member_view_graph" model="ir.ui.view">
+      <field name="name">online_store.member.view.graph</field>
+      <field name="model">online_store.member</field>
+      <field name="arch" type="xml">
+        <graph string="Graph Description">
+          <!-- Add your fields here -->
+
+        </graph>
+      </field>
+    </record>
+
+
+  </data>
+
+
+</odoo>

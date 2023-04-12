@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "ctu",
+    'name': "online_store",
 
     'summary': """
-        Training odoo CTU""",
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Training CTU
+        Long description of module's purpose
     """,
 
-    'author': "Syswantob1",
+    'author': "My Company",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -26,7 +27,7 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/training.xml',
+        'views/member.xml',
         'views/menuitems.xml'
     ],
     # only loaded in demonstration mode
