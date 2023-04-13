@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-online_store.access_online_store_member,access_online_store_member,online_store.model_online_store_member,base.group_user,1,1,1,1,
-online_store.access_online_store_barang,access_online_store_barang,online_store.model_online_store_barang,base.group_user,1,1,1,1,
-online_store.access_online_store_chart,access_online_store_chart,online_store.model_online_store_chart,base.group_user,1,1,1,1,
-online_store.access_online_store_category,access_online_store_category,online_store.model_online_store_category,base.group_user,1,1,1,1,
-online_store.access_online_store_cart_detail,access_online_store_cart_detail,online_store.model_online_store_cart_detail,base.group_user,1,1,1,1, 
+access_online_store_member,access_online_store_member,model_online_store_member,base.group_user,1,1,1,1
+access_online_store_barang,access_online_store_barang,model_online_store_barang,base.group_user,1,1,1,1
+access_online_store_chart,access_online_store_chart,model_online_store_chart,base.group_user,1,1,1,1
+access_online_store_category,access_online_store_category,model_online_store_category,base.group_user,1,1,1,1
+access_online_store_cart_detail,access_online_store_cart_detail,model_online_store_cart_detail,base.group_user,1,1,1,1

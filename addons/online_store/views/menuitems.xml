@@ -4,17 +4,17 @@
   <data>
     <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
     <menuitem id="online_store_menu_root" name="Online Store" />
-    
-    
+
+
     <!-- This Menu Item Must have a parent -->
     <menuitem id="online_store_menu_categ" name="Online Store" parent="online_store_menu_root" />
     <!-- This Menu Item must have a parent and an action -->
-    <menuitem id="online_store_menu_act" name="Member" parent="online_store_menu_categ"
-      action="online_store_member_action" />
+    <menuitem id="online_store_member_menu_act" name="Member" parent="online_store_menu_categ"
+      action="hr.open_view_employee_list_my" />
+    <menuitem id="online_store_category_menu_act" name="Category" parent="online_store_menu_categ"
+      action="online_store_category_action" />
 
 
-
-      
   </data>
 
 </odoo>

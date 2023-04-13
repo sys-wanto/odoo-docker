@@ -10,7 +10,10 @@
         <tree>
           <!-- Add your fields here -->
           <field name="category_nm"></field>
-          <field name="join_date"></field>
+          <field name="created_at"></field>
+          <field name="updated_at"></field>
+          <field name="create_date"></field>
+          <field name="write_date"></field>
         </tree>
       </field>
     </record>
@@ -25,7 +28,6 @@
             <group>
               <!-- Add your fields here -->
               <field name="category_nm"></field>
-              <!-- <field name="join_date"></field> -->
 
             </group>
           </sheet>
