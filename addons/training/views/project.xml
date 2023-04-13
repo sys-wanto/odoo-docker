@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+
+    <!-- ctu.project tree view -->
+    <record id="ctu_project_view_tree" model="ir.ui.view">
+      <field name="name">ctu.project.view.tree</field>
+      <field name="model">ctu.project</field>
+      <field name="arch" type="xml">
+        <tree>
+          <!-- Add your fields here -->
+          <field name="name" />
+          <field name="customer" />
+          <field name="penanggung_jawab" />
+          <field name="start_date" />
+          <field name="end_date" />
+          <field name="budget" />
+          <field name="margin" />
+          <field name="total" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- ctu.project form view -->
+    <record id="ctu_project_view_form" model="ir.ui.view">
+      <field name="name">ctu.project.view.form</field>
+      <field name="model">ctu.project</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <!-- Add your fields here -->
+              <field name="name" />
+              <field name="customer" />
+              <field name="penanggung_jawab" />
+              <field name="start_date" />
+              <field name="end_date" />
+              <field name="budget" />
+              <field name="margin" />
+              <field name="total" />
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- ctu.project action window -->
+    <record id="ctu_project_action" model="ir.actions.act_window">
+      <field name="name">Project</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ctu.project</field>
+      <field name="view_mode">tree,form,pivot,graph</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <!-- Add Text Here -->
+        </p>
+        <p>
+          <!-- More details about what a user can do with this object will be OK -->
+
+        </p>
+      </field>
+    </record>
+
+    <!-- ctu.project pivot view -->
+    <record id="ctu_project_view_pivot" model="ir.ui.view">
+      <field name="name">ctu.project.view.pivot</field>
+      <field name="model">ctu.project</field>
+      <field name="arch" type="xml">
+        <pivot string="Pivot Description">
+          <!-- Add your fields here -->
+          
+        </pivot>
+      </field>
+    </record>
+
+    <!-- ctu.project graph view -->
+    <record id="ctu_project_view_graph" model="ir.ui.view">
+      <field name="name">ctu.project.view.graph</field>
+      <field name="model">ctu.project</field>
+      <field name="arch" type="xml">
+        <graph string="Graph Description">
+          <!-- Add your fields here -->
+          
+        </graph>
+      </field>
+    </record>
+
+
+  </data>
+
+</odoo>
