@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
   <data>
-
+    <report id="project_xlsx" model="ctu.project" string="Print to XLSX" report_type="xlsx" name="project.one" file="res_project" attachment_use="False" />
     <!-- ctu.project tree view -->
     <record id="ctu_project_view_tree" model="ir.ui.view">
       <field name="name">ctu.project.view.tree</field>
@@ -27,6 +27,13 @@
       <field name="model">ctu.project</field>
       <field name="arch" type="xml">
         <form string="">
+          <header>
+            <button name="set_to_confirm" type="object" states="draft" string="Confirm" class="btn-info"></button>
+            <button name="set_to_draft" type="object" states="done" string="Reset" class="btn-danger"></button>
+            <button name="set_to_done" type="object" states="confirm" string="Done" class="btn-success"></button>
+            <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done" />
+
+          </header>
           <sheet>
             <group>
               <!-- Add your fields here -->
@@ -39,7 +46,36 @@
               <field name="margin" />
               <field name="total" />
             </group>
+
+            <notebook>
+              <page name="Sub Project" string="Sub Project">
+                <field name="sub_project_ids">
+                  <tree editable="bottom">
+                    <field name="name" />
+                    <field name="start_date" />
+                    <field name="end_date" />
+                    <field name="budget" />
+                  </tree>
+                  <form>
+                    <sheet>
+                      <group>
+                        <field name="name" />
+                        <field name="start_date" />
+                        <field name="end_date" />
+                        <field name="budget" />
+                      </group>
+                    </sheet>
+                  </form>
+                </field>
+
+              </page>
+            </notebook>
           </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
         </form>
       </field>
     </record>
@@ -68,7 +104,7 @@
       <field name="arch" type="xml">
         <pivot string="Pivot Description">
           <!-- Add your fields here -->
-          
+
         </pivot>
       </field>
     </record>
@@ -80,7 +116,7 @@
       <field name="arch" type="xml">
         <graph string="Graph Description">
           <!-- Add your fields here -->
-          
+
         </graph>
       </field>
     </record>

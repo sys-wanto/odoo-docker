@@ -3,27 +3,26 @@
 
   <data>
     <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
-    <menuitem id="training_menu_root" name="CTU Training" />
+    <menuitem id="training_menu_root" name="CTU" web_icon="module_name,static/description/icon.png" />
 
 
     <!-- This Menu Item Must have a parent -->
-    <menuitem id="training_menu_categ" name="Training" parent="training_menu_root" />
+    <menuitem id="training_menu_categ" name="Menu" parent="training_menu_root" />
     <!-- This Menu Item must have a parent and an action -->
-    <menuitem id="training_menu_act" name="Class" parent="training_menu_categ"
-      action="ctu_training_action" />
+    <menuitem id="project_menu_act" name="Project" parent="training_menu_categ" action="ctu_project_action" sequence="5" />
+    <menuitem id="training_menu_act" name="Class" parent="training_menu_categ" action="ctu_training_action" sequence="10" />
 
 
     <!-- menu project -->
 
     <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
-    <menuitem id="project_menu_root" name="Project" />
+    <!-- <menuitem id="project_menu_root" name="Project" /> -->
 
     <!-- This Menu Item Must have a parent -->
-    <menuitem id="project_menu_categ" name="CTU Project" parent="project_menu_root" />
+    <!-- <menuitem id="project_menu_categ" name="CTU Project" parent="project_menu_root" /> -->
 
     <!-- This Menu Item must have a parent and an action -->
-    <menuitem id="project_menu_act" name=" Project List" parent="project_menu_categ"
-      action="ctu_project_action" />
+    <!-- <menuitem id="project_menu_act" name=" Project List" parent="project_menu_categ" action="ctu_project_action" /> -->
 
 
   </data>
