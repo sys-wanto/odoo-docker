@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'contacts', 'hr', 'mail', 'report_xlsx'],
+    'depends': ['base', 'contacts', 'hr', 'mail', 'report_xlsx', 'web'],
 
     # always loaded
     'data': [
@@ -28,6 +28,7 @@
         'views/templates.xml',
         'views/training.xml',
         'views/project.xml',
+        'report/report_project.xml',
         'views/menuitems.xml'
     ],
     # only loaded in demonstration mode

@@ -121,6 +121,16 @@
       </field>
     </record>
 
+    <record id="ctu_project_report" model="ir.actions.report">
+      <field name="name">Report Project</field>
+      <field name="model">ctu.project</field>
+      <field name="report_type">qweb-html</field>
+      <field name="report_name">training.report_project_xml</field>
+      <field name="report_file">training.report_project_xml</field>
+      <field name="print_report_name">'Project - %s' % (object.name or '')</field>
+      <field name="binding_model_id" ref="training.model_ctu_project"></field>
+      <field name="binding_type">report</field>
+    </record>
 
   </data>
 
