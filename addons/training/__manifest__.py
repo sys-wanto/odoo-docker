@@ -19,13 +19,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'contacts', 'hr', 'mail', 'report_xlsx', 'web'],
+    'depends': ['base', 'contacts', 'hr', 'mail', 'report_xlsx', 'web','sale_management','stock'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/saleorder.xml',
+        'views/stockpicking.xml',
         'views/training.xml',
         'views/project.xml',
         'report/report_project.xml',
