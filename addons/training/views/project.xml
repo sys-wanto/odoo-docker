@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
   <data>
+
     <report id="project_xlsx" model="ctu.project" string="Print to XLSX" report_type="xlsx" name="project.one" file="res_project" attachment_use="False" />
     <!-- ctu.project tree view -->
     <record id="ctu_project_view_tree" model="ir.ui.view">
@@ -31,10 +32,12 @@
             <button name="set_to_confirm" type="object" states="draft" string="Confirm" class="btn-info"></button>
             <button name="set_to_draft" type="object" states="done" string="Reset" class="btn-danger"></button>
             <button name="set_to_done" type="object" states="confirm" string="Done" class="btn-success"></button>
+            <button name="create_sales_order" type="object" states="confirm" string="Create Sales Order" class="btn-info"></button>
             <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done" />
 
           </header>
           <sheet>
+            <div class="oe_button_box"></div>
             <group>
               <!-- Add your fields here -->
               <field name="name" />
@@ -54,6 +57,7 @@
                     <field name="name" />
                     <field name="start_date" />
                     <field name="end_date" />
+                    <field name="qty" />
                     <field name="budget" />
                   </tree>
                   <form>
@@ -130,6 +134,20 @@
       <field name="print_report_name">'Project - %s' % (object.name or '')</field>
       <field name="binding_model_id" ref="training.model_ctu_project"></field>
       <field name="binding_type">report</field>
+    </record>
+
+    <!-- ctu_project_smart_button inherit tree view -->
+    <record id="ctu_project_smart_button" model="ir.ui.view">
+      <field name="name">ctu.project_smart_button.inherit.view.tree</field>
+      <field name="model">ctu.project</field>
+      <field name="inherit_id" ref="training.ctu_project_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//div[@class='oe_button_box']" position="inside">
+          <button name="smart_button_link" type="object" class="oe_stat_button" icon="fa-file">
+            <field name="projects_quotation" string="Quotation" widget="statinfo"/>
+          </button>
+        </xpath>
+      </field>
     </record>
 
   </data>
